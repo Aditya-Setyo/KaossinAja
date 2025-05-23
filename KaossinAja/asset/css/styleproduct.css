@@ -1,0 +1,361 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  font-family: Arial, sans-serif;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #fff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.navbar .logo {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar ul li {
+  margin: 0 10px;
+}
+
+.navbar ul li a {
+  text-decoration: none;
+  color: black;
+  font-size: 14px;
+  transition: color 0.3s ease;
+}
+
+.navbar ul li a:hover {
+  color: #00aef0;
+}
+
+.navbar ul.buttontextlogin li button {
+  background: none;
+  border: none;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+/* Styling Popup */
+.popup-payment {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  z-index: 1000;
+  border-radius: 10px;
+  width: 300px;
+  text-align: center;
+}
+
+.popup-payment h2 {
+  margin-bottom: 20px;
+}
+
+.popup-payment .payment-options {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.popup-payment .payment-options button {
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.popup-payment .payment-options button:hover {
+  background-color: #45a049;
+}
+
+.popup-payment .close-btn {
+  margin-top: 15px;
+  color: red;
+  cursor: pointer;
+}
+
+
+.product-container {
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  background: #213555;
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  max-width: auto;
+  width: auto;
+  height: 87vh;
+}
+
+.product-image img {
+  max-width: 800px;
+  border-radius: 8px;
+}
+
+.product-details {
+  margin-left: 20px;
+  display: flex;
+  flex-direction: column;
+  width: auto;
+}
+
+.product-details h1 {
+  font-size: 24px;
+  margin: 0 0 10px;
+  color: white;
+}
+
+.price {
+  font-size: 18px;
+  margin: 10px 0;
+}
+
+.discounted-price {
+  color: red;
+  font-weight: bold;
+}
+
+.original-price {
+  text-decoration: line-through;
+  color: #999;
+  margin-left: 10px;
+}
+
+.size-selection,
+.quantity-selection {
+  margin: 10px 0;
+  color: white;
+}
+
+.sizes .size {
+  margin-top: 15px;
+  margin-right: 5px;
+  padding: 10px 15px;
+  border: 1px solid #ddd;
+  background: #fff;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.sizes .size.selected {
+  border-color: #333;
+  font-weight: bold;
+}
+
+.quantity-selection .quantity-btn {
+  margin-top: 15px;
+  padding: 5px 10px;
+  border: 1px solid #ddd;
+  background: #fff;
+  cursor: pointer;
+}
+
+.quantity-selection #quantity {
+  width: 50px;
+  padding: 5px 10px;
+  text-align: center;
+  border: 1px solid #ddd;
+  margin: 0 5px;
+}
+
+.action-buttons {
+  display: flex;
+  margin-top: 20px;
+}
+
+.action-buttons button {
+  padding: 10px 20px;
+  margin-right: 10px;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.keranjang {
+  background-color: #eee;
+  text-decoration: none;
+}
+
+.buy-now {
+  text-decoration: none;
+  background-color: #28a745;
+  color: black;
+}
+
+/* Footer Styles */
+.footer {
+  background-color: #2d3142;
+  color: white;
+  padding: 15px 20px;
+  font-family: Arial, sans-serif;
+  margin-top: auto;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+/* Contact Info Styles */
+.contact-info {
+  display: flex;
+  gap: 20px;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.contact-item a {
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.contact-item a:hover {
+  text-decoration: underline;
+}
+
+.contact-item .icon {
+  width: 20px;
+  height: 20px;
+}
+
+/* Promo Text Styles */
+.promo-text {
+  text-align: center;
+  flex: 1;
+  font-size: 14px;
+}
+
+/* Social Media Links Styles */
+.social-media {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.social-icon {
+  width: 20px;
+  height: 20px;
+  transition: transform 0.3s ease;
+}
+
+.social-icon:hover {
+  transform: scale(1.2);
+}
+/* Pop up Register & Login */
+.popup {
+  z-index: 3;
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  justify-content: center;
+  align-items: center;
+}
+.popup-content {
+  z-index: 3;
+  background-color: aliceblue;
+  padding: 40px;
+  width: 450px;
+  border-radius: 8px;
+  text-align: center;
+  position: relative;
+}
+.close-btn {
+  z-index: 3;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 18px;
+  cursor: pointer;
+}
+form input {
+  z-index: 3;
+  width: 90%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #14090f;
+  border-radius: 5px;
+}
+
+form button {
+  margin-top: 20px;
+  z-index: 3;
+  width: 90%;
+  padding: 10px;
+  background-color: #90ee90;
+  border: none;
+  color: black;
+  font-size: 16px;
+  cursor: pointer;
+}
+/* Pop up Berhasil */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+  background-color: white;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 30%;
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}

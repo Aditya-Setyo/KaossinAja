@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>KaosSin Aja</title>
+    <link rel="stylesheet" href="../asset/css/stylekeranjang.css" />
+  </head>
+  <body>
+    <!-- Navbar -->
+    <header class="navbar">
+      <div class="logo">Gataco Official Shop</div>
+      <ul>
+        <li><a href="../index.php">Home</a></li>
+        <li><a href="HalAbout.html">About</a></li>
+        <li><a href="halshop.html">Shop</a></li>
+        <li><a href="HalAbout.html">Keranjang</a></li>
+      </ul>
+      <ul class="buttontextlogin">
+        <li><button id="open-popup-login">Login</button></li>
+        <li><button id="open-popup-regis">Register</button></li>
+      </ul>
+    </header>
+
+    <div class="cart-container">
+      <div class="cart-header">
+        <span>PRODUCT</span>
+        <span>QUANTITY</span>
+        <span>TOTAL</span>
+      </div>
+
+      <div class="cart-item">
+        <div class="cart-details">
+          <img src="../asset/image/bahan1.png" alt="Product Image" />
+          <div>
+            <h4>RODA GRATIS KAOS RUSS</h4>
+            <p>L</p>
+            <p>85.000</p>
+          </div>
+        </div>
+
+        <div class="cart-quantity">
+          <button id="decrease">-</button>
+          <input type="text" id="quantity" value="1" readonly />
+          <button id="increase">+</button>
+        </div>
+
+        <span style="color: white">85.000</span>
+        <a
+          href="#"
+          style="
+            color: red;
+            text-decoration: none;
+            justify-content: center;
+            align-items: center;
+          "
+          >REMOVE</a
+        >
+      </div>
+
+      <div class="checkout" class="">
+        <span>TOTAL: 85.000</span>
+        <button>CHECKOUT</button>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer-container">
+        <!-- Contact Information -->
+        <div class="contact-info">
+          <div class="contact-item">
+            <img src="../asset/image/icontlp.png" alt="Phone" class="icon" />
+            <a href="tel:+1225555018">0857-2905-8285</a>
+          </div>
+          <div class="contact-item">
+            <img src="../asset/image/iconemail.png" alt="Email" class="icon" />
+            <a href="Gataco.Official@gmail.com">Gataco.Official@gmail.com</a>
+          </div>
+        </div>
+
+        <!-- Promo Text -->
+        <div class="promo-text">Follow Us and get a chance to win 80% off</div>
+
+        <!-- Social Media Links -->
+        <div class="social-media">
+          <span>Follow Us:</span>
+          <a href="https://www.facebook.com/"
+            ><img src="../asset/image/iconfb.png" alt="Facebook" class="social-icon"
+          /></a>
+          <a href="https://www.instagram.com/"
+            ><img src="../asset/image/iconig.png" alt="Instagram" class="social-icon"
+          /></a>
+          <a href="https://www.youTube.com/"
+            ><img src="../asset/image/iconyt.png" alt="YouTube" class="social-icon"
+          /></a>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Register -->
+    <div id="popupRegis" class="popup">
+      <div class="popup-content">
+        <span class="close-btn">&times;</span>
+        <form>
+          <h2>Register !</h2>
+          <input type="nama" placeholder="Name" required />
+          <input type="email" placeholder="Email" required />
+          <input type="password" placeholder="Password" required />
+          <input
+            type="confirmpassword"
+            placeholder="Confirm Password"
+            required
+          />
+          <button type="submit">Login</button>
+        </form>
+      </div>
+    </div>
+
+    <!-- Login -->
+    <div id="popupLogin" class="popup">
+      <div class="popup-content">
+        <span class="close-btn">&times;</span>
+        <form>
+          <h2>Login !</h2>
+          <input type="nama" placeholder="Name / Email" required />
+          <input type="password" placeholder="Password" required />
+          <button type="submit">Login</button>
+        </form>
+      </div>
+    </div>
+
+    <div id="successPopup" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <p>Data berhasil disimpan!</p>
+      </div>
+    </div>
+    <script src="../asset/javascript/scriptproduct.js"></script>
+    <script src="../asset/javascript/script.js"></script>
+  </body>
+</html>

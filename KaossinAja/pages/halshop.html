@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shop</title>
+    <link rel="stylesheet" href="../asset/css/styleshop.css" />
+  </head>
+  <body>
+    <!-- Navbar -->
+    <header class="navbar">
+      <div class="logo">Gataco Official Shop</div>
+      <ul>
+        <li><a href="../index.php">Home</a></li>
+        <li><a href="HalAbout.html">About</a></li>
+        <li><a href="halshop.html">Shop</a></li>
+        <li>
+          <a href="halkeranjang.html">Keranjang</a>
+        </li>
+      </ul>
+      <ul class="buttontextlogin">
+        <li><button id="open-popup-login">Login</button></li>
+        <li><button id="open-popup-regis">Register</button></li>
+      </ul>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="hero-content">
+        <div class="hero-text">
+          <h1>We Believe We Can All Make A Diference</h1>
+          <p>
+            Our way: Exceptional quality. Ethical factories. Radical
+            Transparency.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <h1 style="font-size: 20px; font-family: sans-serif">Product</h1>
+
+    <!-- Product 1 -->
+    <div class="product-grid">
+      <div class="product-card">
+        <div class="sale-badge">SALE!</div>
+        <img src="../asset/image/bahan1.png" alt="Produk 1" />
+        <p class="product-name">
+          <a href="halproduct1.html"
+            >RUSS KAOS PRIA TSHIRT TANGAN <br />
+            PANJANG LUSH BLACK</a
+          >
+        </p>
+        <p class="price">
+          <span class="current-price">69.000</span>
+          <span class="original-price">350.000</span>
+        </p>
+      </div>
+      <!-- Product 2 -->
+      <div class="product-card">
+        <div class="sale-badge">SALE!</div>
+        <img src="../asset/image/bahan2.png" alt="Produk 2" />
+        <p class="product-name">
+          <a href="halproduct2.html">RUSS KAOS PRIA NICE DAY TSHIRT HITAM</a>
+        </p>
+        <p class="price">
+          <span class="current-price">85.000</span>
+          <span class="original-price">250.000</span>
+        </p>
+      </div>
+      <!-- Product 3 -->
+      <div class="product-card">
+        <div class="sale-badge">SALE!</div>
+        <img src="../asset/image/bahan1.png" alt="Produk 3" />
+        <p class="product-name">
+          <a href="halproduct3.html">KAOS RUSS HEMMING PUTIH</a>
+        </p>
+        <p class="price">
+          <span class="current-price">95.000</span>
+          <span class="original-price">230.000</span>
+        </p>
+      </div>
+      <!-- Product 4 -->
+      <div class="product-card">
+        <div class="sale-badge">SALE!</div>
+        <img src="../asset/image/bahan2.png" alt="Produk 4" />
+        <p class="product-name">
+          <a href="halproduct4.html">KAOS RUSS HEMMING HITAM</a>
+        </p>
+        <p class="price">
+          <span class="current-price">95.000</span>
+          <span class="original-price">240.000</span>
+        </p>
+      </div>
+      <!-- Product 5 -->
+      <div class="product-card">
+        <div class="sale-badge">SALE!</div>
+        <img src="../asset/image/bahan1.png" alt="Produk 5" />
+        <p class="product-name">
+          <a href="halproduct5.html">RUSS KAOS PRIA TSHIRT TANGAN <br />
+            PANJANG LUSH PUTIH</a>
+        </p>
+        <p class="price">
+          <span class="current-price">95.000</span>
+          <span class="original-price">260.000</span>
+        </p>
+      </div>
+      <!-- Product 6 -->
+      <div class="product-card">
+        <div class="sale-badge">SALE!</div>
+        <img src="../asset/image/bahan2.png" alt="Produk 6" />
+        <p class="product-name">
+          <a href="halproduct6.html">RUSS KAOS PRIA BAD DAY TSHIRT HITAM</a>
+        </p>
+        <p class="price">
+          <span class="current-price">95.000</span>
+          <span class="original-price">230.000</span>
+        </p>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer-container">
+        <!-- Contact Information -->
+        <div class="contact-info">
+          <div class="contact-item">
+            <img src="../asset/image/icontlp.png" alt="Phone" class="icon" />
+            <a href="tel:+1225555018">0857-2905-8285</a>
+          </div>
+          <div class="contact-item">
+            <img src="../asset/image/iconemail.png" alt="Email" class="icon" />
+            <a href="Gataco.Official@gmail.com">Gataco.Official@gmail.com</a>
+          </div>
+        </div>
+
+        <!-- Promo Text -->
+        <div class="promo-text">Follow Us and get a chance to win 80% off</div>
+
+        <!-- Social Media Links -->
+        <div class="social-media">
+          <span>Follow Us:</span>
+          <a href="https://www.facebook.com/"
+            ><img src="../asset/image/iconfb.png" alt="Facebook" class="social-icon"
+          /></a>
+          <a href="https://www.instagram.com/"
+            ><img src="../asset/image/iconig.png" alt="Instagram" class="social-icon"
+          /></a>
+          <a href="https://www.youTube.com/"
+            ><img src="../asset/image/iconyt.png" alt="YouTube" class="social-icon"
+          /></a>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Register -->
+    <div id="popupRegis" class="popup">
+      <div class="popup-content">
+        <span class="close-btn">&times;</span>
+        <form>
+          <h2>Register !</h2>
+          <input type="nama" placeholder="Name" required />
+          <input type="email" placeholder="Email" required />
+          <input type="password" placeholder="Password" required />
+          <input
+            type="confirmpassword"
+            placeholder="Confirm Password"
+            required
+          />
+          <button type="submit">Login</button>
+        </form>
+      </div>
+    </div>
+
+    <!-- Login -->
+    <div id="popupLogin" class="popup">
+      <div class="popup-content">
+        <span class="close-btn">&times;</span>
+        <form>
+          <h2>Login !</h2>
+          <input type="nama" placeholder="Name / Email" required />
+          <input type="password" placeholder="Password" required />
+          <button type="submit">Login</button>
+        </form>
+      </div>
+    </div>
+
+    <div id="successPopup" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <p>Data berhasil disimpan!</p>
+      </div>
+    </div>
+    <script src="../asset/javascript/script.js"></script>
+  </body>
+</html>

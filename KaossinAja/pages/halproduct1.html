@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>KaosSin Aja</title>
+    <link rel="stylesheet" href="../asset/css/styleproduct.css" />
+  </head>
+  <body>
+    <!-- Navbar -->
+    <header class="navbar">
+      <div class="logo">Gataco Official Shop</div>
+      <ul>
+        <li><a href="../index.php">Home</a></li>
+        <li><a href="HalAbout.html">About</a></li>
+        <li><a href="halshop.html">Shop</a></li>
+        <li><a href="halkeranjang.html">Keranjang</a></li>
+      </ul>
+      <ul class="buttontextlogin">
+        <li><button id="open-popup-login">Login</button></li>
+        <li><button id="open-popup-regis">Register</button></li>
+      </ul>
+    </header>
+
+    <div class="product-container">
+      <div class="product-image">
+        <img
+          src="../asset/image/bahan1.png"
+          alt="RUSS KAOS PRIA TSHIRT TANGAN"
+        />
+      </div>
+      <div class="product-details">
+        <h1 id="item-name">RUSS KAOS PRIA TSHIRT TANGAN <br />
+          PANJANG LUSH BLACK</h1>
+        <p class="price">
+          <span class="discounted-price" id="item-price">69.000</span>
+          <span class="original-price">350.000</span>
+        </p>
+        <div class="size-selection">
+          <p>Ukuran:</p>
+          <div class="sizes">
+            <button id="S" class="size">S</button>
+            <button id="M" class="size">M</button>
+            <button id="L" class="size selected">L</button>
+            <button id="XL" class="size">XL</button>
+          </div>
+        </div>
+        <div class="quantity-selection">
+          <p>Quantity:</p>
+          <button class="quantity-btn" id="decrease">-</button>
+          <input type="text" id="quantity" value="1" readonly />
+          <button class="quantity-btn" id="increase">+</button>
+        </div>
+        <p id="stock-info" style="color: white">Loading stock...</p>
+        <div class="action-buttons">
+          <button class="keranjang"><a href="halkeranjang.html">Keranjang</a></button>
+          <button id="buy-now" class="buy-now">Beli Sekarang</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer-container">
+        <!-- Contact Information -->
+        <div class="contact-info">
+          <div class="contact-item">
+            <img src="../asset/image/icontlp.png" alt="Phone" class="icon" />
+            <a href="tel:+1225555018">0857-2905-8285</a>
+          </div>
+          <div class="contact-item">
+            <img src="../asset/image/iconemail.png" alt="Email" class="icon" />
+            <a href="Gataco.Official@gmail.com">Gataco.Official@gmail.com</a>
+          </div>
+        </div>
+
+        <!-- Promo Text -->
+        <div class="promo-text">Follow Us and get a chance to win 80% off</div>
+
+        <!-- Social Media Links -->
+        <div class="social-media">
+          <span>Follow Us:</span>
+          <a href="https://www.facebook.com/"
+            ><img
+              src="../asset/image/iconfb.png"
+              alt="Facebook"
+              class="social-icon"
+          /></a>
+          <a href="https://www.instagram.com/"
+            ><img
+              src="../asset/image/iconig.png"
+              alt="Instagram"
+              class="social-icon"
+          /></a>
+          <a href="https://www.youTube.com/"
+            ><img
+              src="../asset/image/iconyt.png"
+              alt="YouTube"
+              class="social-icon"
+          /></a>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Register -->
+    <div id="popupRegis" class="popup">
+      <div class="popup-content">
+        <span class="close-btn">&times;</span>
+        <form>
+          <h2>Register !</h2>
+          <input type="nama" placeholder="Name" required />
+          <input type="email" placeholder="Email" required />
+          <input type="password" placeholder="Password" required />
+          <input
+            type="confirmpassword"
+            placeholder="Confirm Password"
+            required
+          />
+          <button type="submit">Login</button>
+        </form>
+      </div>
+    </div>
+
+    <!-- Login -->
+    <div id="popupLogin" class="popup">
+      <div class="popup-content">
+        <span class="close-btn">&times;</span>
+        <form>
+          <h2>Login !</h2>
+          <input type="nama" placeholder="Name / Email" required />
+          <input type="password" placeholder="Password" required />
+          <button type="submit">Login</button>
+        </form>
+      </div>
+    </div>
+
+    <div id="successPopup" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <p>Data berhasil disimpan!</p>
+      </div>
+    </div>
+
+    <!-- Popup Payment -->
+    <div id="popupPayment" class="popup-payment">
+      <h2>Pilih Metode Pembayaran</h2>
+      <div class="payment-options">
+        <button onclick="metodepembayaran('Dana')">Dana</button>
+        <button onclick="metodepembayaran('GoPay')">GoPay</button>
+        <button onclick="metodepembayaran('ShopeePay')">ShopeePay</button>
+        <button onclick="metodepembayaran('Virtual Account')">Virtual Account</button>
+      </div>
+      <span class="close-btn" id="close-popup-payment" style="color: black;">X</span>
+    </div>    
+
+    <div id="overlay"></div>
+
+    <script>
+      // Fungsi untuk mengambil stok dari backend
+      function fetchStock(productId) {
+        fetch(`../asset/php/koneksi.php?id=${productId}`)
+          .then(response => response.text())
+          .then(stock => {
+            const stockInfo = document.getElementById("stock-info");
+            stockInfo.textContent = `${stock} pieces in stock`; // Tampilkan stok
+          })
+          .catch(error => {
+            console.error("Error fetching stock:", error);
+            const stockInfo = document.getElementById("stock-info");
+            stockInfo.textContent = "Failed to load stock.";
+          });
+      }
+    
+      // panggil id
+      fetchStock(1);
+    </script>
+
+    <script src="../asset/javascript/scriptproduct.js"></script>
+    <script src="../asset/javascript/script.js"></script>
+  </body>
+</html>
